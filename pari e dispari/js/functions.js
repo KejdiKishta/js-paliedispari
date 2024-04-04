@@ -1,34 +1,33 @@
+//* funzione numero casuale
 /**
  * Description
- * @param {string} userWord
- * @returns {boolean}
+ * @returns {number}
  */
-function palCtrl (userWord) {
-        //*ciclo for
-    let result1 = "";
-    for (let i = 0; i < userWord.length; i++) {
-        const curLetter = userWord[i];
-        result1 +=userWord[i]
-    }
-    console.log(result1);
+function rndNum () {
+    //* generazione numero
+    const cpuNum = Math.floor(Math.random() * 5) + 1;
+    return cpuNum;
+}
 
-    //*ciclo for al contrario
-    let result2 = "";
-    for(let j = userWord.length -1; j >= 0; j--) {
-        const curLetter2 = userWord[j];
-        result2 +=userWord[j]
-    }
-    console.log(result2);
+//* funzione se pari o dispari
+/**
+ * Description
+ * @param {number} num1
+ * @param {number} num2
+ * @returns {boolean}
+*/
+function oddEvenSum (num1, num2) {
+    //*somma
+    let sum = num1 + num2
+    console.log("La somma è " + sum);
+    
+    //*flag
+    let flag = false
 
-    //*variabile booleana
-    let palindromo;
-
-    //*condizione
-    if (result1 === result2) {
-        palindromo = true
-    } else {
-        palindromo = false
+    if (sum % 2 === 0) {
+        flag = true
     }
-    console.log(palindromo);
-    return palindromo;
+
+    console.log(flag);
+    return flag;
 }

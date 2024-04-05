@@ -4,13 +4,8 @@
  * @returns {boolean}
  */
 function palCtrl (userWord) {
-        //*ciclo for
-    let result1 = "";
-    for (let i = 0; i < userWord.length; i++) {
-        const curLetter = userWord[i];
-        result1 +=userWord[i]
-    }
-    console.log(result1);
+    //*porto l'input nella funzione
+    let result1 = userWord;
 
     //*ciclo for al contrario
     let result2 = "";
